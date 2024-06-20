@@ -30,8 +30,8 @@ with open("alldata.txt",'w') as file:
 with open("mnemonics.txt",'r') as file:
     mnemonics = [mnemo.strip() for mnemo in file.readlines()]
 for mnemonic in mnemonics:
-    COINT_DERIVATION_PATH = 1
-    for count in range(COINT_DERIVATION_PATH):
+    COUNT_DERIVATION_PATH = 1
+    for count in range(COUNT_DERIVATION_PATH):
         try:
             keys = BlockChainAccount(mnemonic=mnemonic)
             info = keys.get_address(count)
